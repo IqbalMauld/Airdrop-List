@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    display: flex;
+    align-items: center;
+    color: #9300b8;
+    margin-bottom: 20px;
+}
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+.row input{
+    /* flex: 1; */
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid rgb(255, 130, 21);
+    background: transparent;
+    font-weight: 14px;
+    /* background-color: rgb(255, 130, 21); */
+}
+.row button{
+    padding: 16px;
+    font-size: 16px;
+    background-color: rgb(255, 130, 21);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.row button:hover{
+    background-color: rgb(166, 72, 0);
+    color: #fff;
+    transition: 0.2s;
+}
+#list{
+    margin-top: 10px;
+}
+#list li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+}
+#list li::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 12px;
+}
+ul li.check{
+    color: #555;
+    text-decoration: line-through;
+}
+#list li.check::before{
+    background-image: url(img/checked.png);
+}
+#list li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+}
+#list li span:hover{
+    background-color: #757575;
+    transition: 0.2s;
+}
+#list li a {
+    position: absolute;
+    left: 350px;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
