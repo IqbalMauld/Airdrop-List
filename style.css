@@ -60,6 +60,7 @@
 }
 #list{
     margin-top: 10px;
+    /* background-color: red; */
 }
 #list li{
     list-style: none;
@@ -68,6 +69,10 @@
     cursor: pointer;
     font-size: 20px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0;
+    text-align: center;
 }
 #list li::before{
     content: "";
@@ -89,8 +94,6 @@ ul li.check{
     background-image: url(img/checked.png);
 }
 #list li span{
-    position: absolute;
-    right: 0;
     top: 5px;
     width: 40px;
     height: 40px;
@@ -104,11 +107,16 @@ ul li.check{
     transition: 0.2s;
 }
 #list li a {
-    position: absolute;
     left: 350px;
     text-decoration: none;
-    border: 2px solid black;
-    padding: 5px;
+    /* padding: 5px; */
     font-size: 15px;
     border-radius: 5px;
+    padding: 10px;
+    color: black;
+    background-color: rgb(255, 130, 21);
+}
+#list li a:hover{
+    background: none;
+    outline: 2px solid rgb(255, 130, 21);
 }
